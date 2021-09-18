@@ -11,6 +11,10 @@ namespace Facebook_DataDrivenFramework
         public void ReadingData()
         {
             ExcelOperations.PopulateInCollection(@"C:\Users\girish.v\source\repos\Facebook_DataDrivenFramework\Facebook_DataDrivenFramework\ExcelData\TestData.xlsx");
+            DoAction.Action.LoginToFaceBook(driver);
+            DoAction.Action.SearchKey(driver);
+            Takescreenshot();
         }
+      
     }
 }

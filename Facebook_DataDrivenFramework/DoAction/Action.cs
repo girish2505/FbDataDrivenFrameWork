@@ -17,14 +17,22 @@ namespace Facebook_DataDrivenFramework.DoAction
 
         public static void LoginToFaceBook(IWebDriver driver)
         {
-            driver.FindElement(By.Name("email")).SendKeys(ExcelOperations.ReadData(1, "email"));
-            System.Threading.Thread.Sleep(3000);
+            LogIn login = new LogIn(driver);
 
-            driver.FindElement(By.Id("pass")).SendKeys(ExcelOperations.ReadData(1, "password"));
-            System.Threading.Thread.Sleep(3000);
+            login.email.SendKeys(ExcelOperations.ReadData(1, "email"));
+            System.Threading.Thread.Sleep(1000);
 
-            driver.FindElement(By.Name("login")).Click();
-            System.Threading.Thread.Sleep(10000);
+            login.password.SendKeys(ExcelOperations.ReadData(1, "password"));
+            System.Threading.Thread.Sleep(1000);
+
+            login.loginBt.Click();
+            System.Threading.Thread.Sleep(1000);
+        }
+        public static void SearchKey(IWebDriver driver)
+        {
+            IWebElement MyElement = driver.FindElement(By.XPath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/label[1]/input[1]"));
+            MyElement.SendKeys(Keys.NumberPad7); MyElement.SendKeys(Keys.Down);
+            MyElement.SendKeys(Keys.Enter);
         }
     }
 }
