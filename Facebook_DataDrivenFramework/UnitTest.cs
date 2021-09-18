@@ -14,7 +14,7 @@ namespace Facebook_DataDrivenFramework
         public void ReadingData()
         {
             test = reports.CreateTest("Tests");
-            test.Log(Status.Info, "Automating Spotify Login PAge");
+            test.Log(Status.Info, "Automating ajio Login PAge");
 
             ExcelOperations.PopulateInCollection(@"C:\Users\girish.v\source\repos\Facebook_DataDrivenFramework\Facebook_DataDrivenFramework\ExcelData\TestData.xlsx");
             DoAction.Action.LoginToFaceBook(driver);
