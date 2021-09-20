@@ -24,7 +24,7 @@ namespace Facebook_DataDrivenFramework.Base
         [SetUp]
         public void start_Browser()
         {
-            var fileInfo = new FileInfo(@"Log4net.config");
+            var fileInfo = new FileInfo(@"log4net.config");
 
             log4net.Config.XmlConfigurator.Configure(repository, fileInfo);
             try

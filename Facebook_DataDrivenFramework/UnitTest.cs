@@ -8,13 +8,13 @@ namespace Facebook_DataDrivenFramework
 {
     class UnitTest:Base.BaseClass
     {
-        ExtentReports reports = ReportClass.report();
+        ExtentReports reports = ReportClass.Report();
         ExtentTest test;
         [Test]
         public void ReadingData()
         {
             test = reports.CreateTest("Tests");
-            test.Log(Status.Info, "Automating ajio Login PAge");
+            test.Log(Status.Info, "Automating facebook Login PAge");
 
             ExcelOperations.PopulateInCollection(@"C:\Users\girish.v\source\repos\Facebook_DataDrivenFramework\Facebook_DataDrivenFramework\ExcelData\TestData.xlsx");
             DoAction.Action.LoginToFaceBook(driver);

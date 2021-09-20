@@ -12,7 +12,7 @@ namespace Facebook_DataDrivenFramework
         public static ExtentReports extent;
         public static ExtentTest test;
 
-        public static ExtentReports report()
+        public static ExtentReports Report()
         {
             if (extent == null)
             {
@@ -24,7 +24,7 @@ namespace Facebook_DataDrivenFramework
                 extent.AddSystemInfo("UserName", "girish");
                 extent.AddSystemInfo("ProviderName", "girish");
                 extent.AddSystemInfo("Domain", "QA");
-                extent.AddSystemInfo("ProjectName", "Ajio Automation");
+                extent.AddSystemInfo("ProjectName", "facebook Automation");
 
                 string conifgPath = @"C:\Users\girish.v\source\repos\Facebook_DataDrivenFramework\Facebook_DataDrivenFramework\Report.xml";
                 htmlReporter.LoadConfig(conifgPath);

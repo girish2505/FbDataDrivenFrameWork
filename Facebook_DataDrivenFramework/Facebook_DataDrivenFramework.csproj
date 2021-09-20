@@ -33,10 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="log4net\Log4net.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="log4net\Log4net.txt">
+    <None Update="log4net.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
