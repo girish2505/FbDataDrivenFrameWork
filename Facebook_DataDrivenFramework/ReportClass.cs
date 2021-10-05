@@ -10,7 +10,7 @@ namespace Facebook_DataDrivenFramework
     {
         public static ExtentHtmlReporter htmlReporter;
         public static ExtentReports extent;
-        public static ExtentTest test;
+        
 
         public static ExtentReports Report()
         {
@@ -28,8 +28,6 @@ namespace Facebook_DataDrivenFramework
 
                 string conifgPath = @"C:\Users\girish.v\source\repos\Facebook_DataDrivenFramework\Facebook_DataDrivenFramework\Report.xml";
                 htmlReporter.LoadConfig(conifgPath);
-
-
             }
             return extent;
         }

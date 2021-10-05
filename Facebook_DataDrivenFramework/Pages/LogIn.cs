@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
+using AutoItX3Lib;
 
 namespace Facebook_DataDrivenFramework
 {
@@ -9,7 +10,7 @@ namespace Facebook_DataDrivenFramework
         public LogIn(IWebDriver driver)
         {
             PageFactory.InitElements(driver, this);
-        } 
+        }
         [FindsBy(How = How.Name, Using = "email")]
         [CacheLookup]
         public IWebElement email;
@@ -21,6 +22,5 @@ namespace Facebook_DataDrivenFramework
         [FindsBy(How = How.Name, Using = "login")]
         [CacheLookup]
         public IWebElement loginBt;
-
     }
 }
